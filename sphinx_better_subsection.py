@@ -1,19 +1,13 @@
-"""Better your Sphinx section IDs
+"""Sphinx extension to prefer explicit IDs in sections
 
-Specify the ID of a section with normal `reST internal hyperlink targets`_:
+Add this extension using::
 
-.. code-block:: rest
+    extensions += ["sphinx_better_subsection"]
 
-    .. _v1.2.3:
+Using the transformer directly is also allowed with::
 
-    v1.2.3 (2022-03-19)
-    -------------------
-
-The permalink is ``#v1-2-3`` instead of ``#v1-2-3-2022-03-19``. Both target
-IDs work however, so old docs will still point to the correct section.
-
-.. _reST internal hyperlink targets:
-    https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#hyperlink-targets
+    from sphinx_better_subsection import PreferSectionTarget
+    app.add_transform(PreferSectionTarget)
 
 """
 from docutils import nodes
