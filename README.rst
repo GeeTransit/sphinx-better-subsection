@@ -28,7 +28,9 @@ Download and install this extension using pip:
 
     $ pip install sphinx-better-subsection
 
-Then add this extension in your ``conf.py``::
+Then add this extension in your ``conf.py``:
+
+.. code-block:: python
 
     extensions += ["sphinx_better_subsection"]
 
@@ -51,7 +53,9 @@ Docutils
 --------
 
 This package provides a docutils_ transformer called `PreferSectionTarget`
-(subclass of ``docutils.transforms.Transform``) usable via::
+(subclass of ``docutils.transforms.Transform``) usable via:
+
+.. code-block:: python
 
     from sphinx_better_subsection import PreferSectionTarget
     document.transformer.add_transform(PreferSectionTarget)
