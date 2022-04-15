@@ -1,0 +1,47 @@
+name: Publish docs to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+# Max one docs building at a time
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  docs:
+    name: Publish dev docs
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          # Fetch all commits for changelog
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.9"
+
+      - name: Set up Hatch
+        run: pip install --pre hatch
+
+      - name: Build docs
+        run: hatch run docs:build
+
+      - name: Publish to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: >
+          github.ref_name == 'main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: "docs/_build/html"
+          # Exclude Sphinx-specific metadata (used for incremental builds)
+          exclude_assets: ".doctrees,.buildinfo,objects.inv"
+          # Reduce repo size (all docs should be reproducible anyway)
+          force_orphan: true
