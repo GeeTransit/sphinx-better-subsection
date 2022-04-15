@@ -1,0 +1,32 @@
+[project]
+name = "sphinx-better-subsection"
+description = "Better your Sphinx section IDs"
+readme = "README.rst"
+license = { text = "MIT" }
+classifiers = [
+	"Development Status :: 3 - Alpha",
+	"Framework :: Sphinx :: Extension",
+	"License :: OSI Approved :: MIT License",
+	"Operating System :: OS Independent",
+	"Programming Language :: Python :: 3",
+]
+requires-python = ">=3.7"
+dependencies = ["docutils>=0.17"]
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://github.com/GeeTransit/sphinx-better-subsection"
+
+[[project.authors]]
+name = "George Zhang"
+email = "geetransit@gmail.com"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build]
+exclude = ["docs"]
+
+[build-system]
+requires = ["hatchling>=0.15.0", "hatch-vcs"]
+build-backend = "hatchling.build"
