@@ -1,0 +1,19 @@
+/* Wrap inside words if necessary (such as on small screens) */
+html {
+	word-wrap: break-word;
+}
+
+/* Pad footer text to feel more spacious (was touching right side before) */
+div.footer {
+	padding-right: 15px;
+}
+
+/* Force autosummary tables to be full width for consistency */
+.longtable {
+	width: 100%;
+}
+
+/* Vertically pad autodoc definitions */
+dl.py > dt:first-child {
+    margin-top: 10px;
+}
