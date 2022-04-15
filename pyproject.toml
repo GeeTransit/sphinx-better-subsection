@@ -25,7 +25,10 @@ email = "geetransit@gmail.com"
 source = "vcs"
 
 [tool.hatch.build]
-exclude = ["docs"]
+exclude = [
+	"docs",
+	".github",
+]
 
 [build-system]
 requires = ["hatchling>=0.15.0", "hatch-vcs"]
