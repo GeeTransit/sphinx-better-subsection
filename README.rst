@@ -76,3 +76,10 @@ MyST would be:
 
 .. _MyST: https://myst-parser.readthedocs.io/en/latest/
 .. _header target syntax: https://myst-parser.readthedocs.io/en/latest/syntax/syntax.html#targets-and-cross-referencing
+
+Links
+-----
+
+- Source Code: https://github.com/GeeTransit/sphinx-better-subsection
+- Documentation: https://geetransit.github.io/sphinx-better-subsection/
+- PyPI Releases: https://pypi.org/project/sphinx-better-subsection/
