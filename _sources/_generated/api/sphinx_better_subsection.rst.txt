@@ -1,0 +1,56 @@
+﻿sphinx\_better\_subsection
+==========================
+
+.. automodule:: sphinx_better_subsection
+	:members:
+	:undoc-members:
+	:show-inheritance:
+	:member-order: bysource
+
+	
+
+	
+	
+	
+
+	
+	
+	
+
+	
+	
+	
+
+	
+	
+	Classes
+	-------
+
+	.. autosummary::
+		:nosignatures:
+
+		
+		PreferSectionTarget
+
+	
+	
+
+	
+	
+	Functions
+	---------
+
+	.. autosummary::
+		:nosignatures:
+
+		
+		setup
+
+	
+	
+
+	
+	
+	Documentation
+	-------------
+	

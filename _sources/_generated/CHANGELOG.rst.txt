@@ -1,0 +1,55 @@
+Changelog
+=========
+
+.. _v0.2:
+
+v0.2 (2022-05-26)
+-----------------
+
+.. _v0.2-Added:
+
+Added
+~~~~~
+- Add project links to README. [George Zhang]
+
+.. _v0.2-Fixed:
+
+Fixed
+~~~~~
+- Fix AttributeError on docutils<0.18. [George Zhang]
+
+.. _v0.1:
+
+v0.1 (2022-04-15)
+-----------------
+
+.. _v0.1-Added:
+
+Added
+~~~~~
+- Add GitHub docs workflow. [George Zhang]
+- Add docs from soundit. [George Zhang]
+- Add usage to README. [George Zhang]
+- Add pyproject.toml and Hatch config. [George Zhang]
+- Add extension code from soundit. [George Zhang]
+
+.. _v0.1-Changed:
+
+Changed
+~~~~~~~
+- Show low level usage in module docs. [George Zhang]
+
+.. _v0.1-Fixed:
+
+Fixed
+~~~~~
+- Fix code highlighting on PyPI. [George Zhang]
+
+.. _v0.1-Other:
+
+Other
+~~~~~
+- Exclude .github folder from builds. [George Zhang]
+- Add .gitignore. [George Zhang]
+- Change README to reST. [George Zhang]
+- Initial commit. [George Zhang]
