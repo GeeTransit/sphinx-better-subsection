@@ -61,7 +61,13 @@ class PreferSectionTarget(Transform):
 
     def apply(self):
         """Docutils transform entry point"""
-        for node in self.document.findall(nodes.section):
+        # `.findall` is new in docutils 0.18. Fallback to `.traverse`.
+        try:
+            findall = self.document.findall
+        except AttributeError:
+            findall = self.document.traverse
+
+        for node in findall(nodes.section):
             # Get node directly preceding the section
             index = node.parent.index(node)
             if index == 0:
